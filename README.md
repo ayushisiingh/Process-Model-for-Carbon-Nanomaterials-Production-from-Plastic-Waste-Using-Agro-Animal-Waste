@@ -251,10 +251,4 @@ Roll No: B22CH005
 
 
 
----
 
-**⭐ If you find this project useful, please consider starring the repository!**
-
----
-
-*Last Updated: November 2025*
