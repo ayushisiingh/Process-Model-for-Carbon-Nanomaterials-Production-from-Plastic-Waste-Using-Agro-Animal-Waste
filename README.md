@@ -1,227 +1,260 @@
-Process Model for Carbon Nanomaterials Production from Plastic Waste Using Agro/Animal Waste
+# Process Model for Carbon Nanomaterials Production from Plastic Waste Using Agro/Animal Waste
 
-Transforming Waste into Wealth: A Circular Economy Approach to Advanced Materials
+##  Overview
 
- Project Overview
-This B.Tech project presents a groundbreaking circular economy solution that simultaneously addresses two critical environmental challenges: plastic waste pollution and biomass waste management. By intelligently integrating thermochemical conversion processes, we transform these waste streams into high-value carbon nanomaterials (CNMs) while generating clean hydrogen energy.
-Key Achievement: A comprehensive Aspen Plus V14 simulation model demonstrating 40-70% methane conversion and carbon deposition rates of 9.4-15.6 mg·h⁻¹·g⁻¹ catalyst.
+This project presents a comprehensive **waste-to-value** process model that converts plastic waste and biomass into high-value **carbon nanomaterials (CNMs)** using Aspen Plus V14. The integrated approach addresses two critical waste management challenges while producing valuable outputs: hydrogen-rich syngas, high-quality bio-oil, and carbon nanomaterials.
 
- The Innovation
-The Problem
+### The Problem We're Solving
+-  **360 million tonnes** of plastic produced annually (only 20% recycled)
+-  **500+ million tonnes** of agricultural waste generated in India alone
+-  Global CNM market projected to reach **$9.8 billion by 2028**
+-  Traditional CNM production relies on expensive catalysts and fossil fuels
 
-🌍 360 million tons of plastic produced annually
-♻ Only 20% recycled effectively
-🔥 500+ million tons of agricultural waste generated in India
-💰 CNM market projected to reach $9.8 billion by 2028
-⚡ Traditional CNM production relies on expensive catalysts and fossil fuels
+### Our Solution
+**Waste → Resource → High-Value CNMs**
 
-Our Solution
-A three-stage integrated process that converts waste into value:
-Plastic Waste → Bio-Oil → 
-                          ↓
-                    [CVD Reactor] → Carbon Nanomaterials + H₂-rich Gas
-                          ↑
-Biomass Waste → Biochar Catalyst →
+A scalable, sustainable pathway that simultaneously:
+- ✅ Mitigates plastic and biomass waste
+- ✅ Produces carbon nanotubes (CNTs) and carbon nanospheres (CNSs)
+- ✅ Generates hydrogen-rich syngas
+- ✅ Captures carbon in stable forms
+- ✅ Reduces greenhouse gas emissions
 
- Key Features
- Technical Highlights
+##  Key Features
 
-Dual-feed system utilizing both plastic and biomass waste
-Biochar catalyst from agro/animal waste (cost-effective alternative to metal catalysts)
-Three integrated flowsheets modeled in Aspen Plus V14
-Equilibrium-based modeling using RGibbs and kinetic reactors
-Multi-product output: CNMs, hydrogen-rich syngas, upgraded bio-oil
+### Technical Highlights
+- **Dual-Feed System**: Integrates plastic pyrolysis (bio-oil) and biomass pyrolysis (biochar catalyst)
+- **Cost-Effective Catalyst**: Uses biochar from agro/animal waste instead of expensive metal catalysts
+- **High Performance**: 40-70% methane conversion, 9.4-15.6 mg·h⁻¹·g⁻¹ carbon deposition rate
+- **Energy Efficient**: Partial oxidation provides autothermal operation
+- **Circular Economy**: Closes the loop from waste to valuable nanomaterials
 
- Environmental Benefits
+### Simulation Capabilities
+- Steady-state equilibrium modeling
+- Thermodynamic property analysis (Peng-Robinson, NRTL)
+- Parametric sensitivity studies
+- Mass and energy balance calculations
+- Product yield optimization
 
-✅ Zero landfill waste from feedstocks
-✅ Carbon capture in stable solid forms
-✅ Reduced greenhouse gas emissions
-✅ Lower PAH content in bio-oil
-✅ Sustainable alternative to fossil-based CNM production
+##  Process Description
 
- Product Quality
+The process consists of three integrated flowsheets:
 
-CNM Purity: >90%
-Hydrogen-rich gas for energy integration
-Enhanced bio-oil with reduced pollutants
-Stable catalyst performance over extended reaction times
+### Flowsheet 1: Plastic Waste to Bio-Oil
+```
+PLASTIC → DRYER → PYROLYSIS → SEPARATOR → CONDENSER → FLASH
+                                    ↓           ↓          ↓
+                                  CHAR      GASES     BIO-OIL
+```
 
+**Key Operations:**
+- Pre-treatment (moisture removal)
+- Thermal pyrolysis at 400-800°C
+- Multi-stage separation (gas/liquid/solid)
+- Product recovery and purification
 
- Process Architecture
-Flowsheet 1: Plastic Waste to Bio-Oil
-PLASTIC → DRYER → PYROLYSIS (500-600°C) → PHASE SEPARATOR → 
-    ├─ CHAR (5-10%)
-    ├─ GASES (60-75%)
-    └─ BIO-OIL (20-30%)
-Flowsheet 2: Biomass to Biochar
-BIOMASS → DRYER → PYROLYSIS (500-700°C) → SEPARATOR → 
-    ├─ BIOCHAR (20-35%)
-    └─ VOLATILES (65-80%)
-Flowsheet 3: CNM Formation (CVD Process)
-BIO-OIL + BIOCHAR + AIR → MIXER → HEATER → R-PLUG REACTOR (650-800°C) → 
-    ├─ CNMs (20-25%)
-    └─ H₂-RICH GAS (75-80%)
+### Flowsheet 2: Biomass to Biochar
+```
+BIOMASS → DRYER → PYROLYSIS (N₂) → SEPARATOR
+                                        ↓
+                                   BIOCHAR (Catalyst)
+```
 
- Simulation Results
-Performance Metrics
-ParameterValueUnitMethane Conversion40-70%Carbon Deposition Rate9.4-15.6mg·h⁻¹·g⁻¹ catCNM Purity>90%Biochar Yield20-35wt%Bio-oil Yield20-30wt%Reactor Temperature650-800°C
-Key Graphs Generated
+**Key Operations:**
+- Drying at 100-150°C
+- Slow pyrolysis at 500-700°C
+- Solid-gas separation
+- Biochar collection
 
-CH₄ Conversion vs. Temperature - Shows optimal operating windows
-Carbon Deposition Rate vs. Temperature - CNM formation kinetics
-CNM Yield vs. Temperature - Production optimization
-H₂ Volume % in Gas - Co-product value assessment
+### Flowsheet 3: Carbon Nanomaterial Formation
+```
+BIO-OIL + BIOCHAR + AIR → MIXER → HEATER → CVD REACTOR → SEPARATOR
+                                                              ↓
+                                                    CNMs + H₂-rich gas
+```
 
+**Key Operations:**
+- Feed homogenization and preheating
+- Catalytic CVD at 650-800°C
+- Carbon deposition on biochar surface
+- Product separation and purification
 
- Technology Stack
-Software & Tools
+##  Technical Details
 
-Aspen Plus V14 - Process simulation and modeling
-Property Methods:
-
-Peng-Robinson (PR-BM) for hydrocarbon systems
-NRTL for oxygenated compounds
-HCOALGEN/DCOALIGT for solid biochar
-
-
-
-Reactor Models Used
-
-RYield - Feed preparation and drying
-RGibbs - Equilibrium-based pyrolysis
-R-PLUG - Catalytic CVD reactor
-SEP/SSPLIT - Phase separation
-FLASH - Product fractionation
+### Feedstock Specifications
+<img width="913" height="377" alt="image" src="https://github.com/user-attachments/assets/e295f1b7-a52d-496f-bb16-9af7bf2df9d8" />
 
 
-📋 Project Structure
-├── Flowsheets/
-│   ├── Flowsheet_1_Plastic_to_BioOil.apw
-│   ├── Flowsheet_2_Biomass_to_Biochar.apw
-│   └── Flowsheet_3_CNM_Formation.apw
-├── Results/
-│   ├── simulation_outputs/
-│   ├── performance_graphs/
-│   └── sensitivity_analysis/
-├── Documentation/
-│   ├── Project_Report.pdf
-│   ├── Literature_Review.pdf
-│   └── Design_Calculations.xlsx
-└── README.md
+### Thermodynamic Methods
+- **Peng-Robinson (PR-BM)**: Hydrocarbon-rich phases
+- **NRTL**: Oxygenated biomass products
+- **HCOALGEN/DCOALIGT + IDEAL**: Solid biochar modeling
 
- Academic Context
-Institution: Indian Institute of Technology Jodhpur
-Department: Chemical Engineering
-Student: Ayushi Singh (B22CH005)
-Supervisor: Prof. Manoj Kumar Jena
-Submission Date: November 2025
-Degree: Bachelor of Technology
-
- Methodology
-1. Feedstock Selection & Characterization
-
-Plastic waste (PE, PP, PS) from municipal solid waste
-Agricultural residues and animal waste (rice husk, bagasse, manure)
-Compositional analysis using ultimate and proximate analysis
-
-2. Process Design Strategy
-
-Thermodynamic foundation with validated property methods
-Steady-state modeling for process feasibility
-Parametric analysis for optimization
-Equipment design considerations
-
-3. Simulation Approach
-
-Feed characterization as nonconventional materials
-Sequential unit operations modeling
-Energy and mass balance closure
-Sensitivity studies on key parameters
-
-
- Key Reactions Modeled
-Pyrolysis Stage
-Plastic/Biomass → Char + Bio-oil + Gases
-CNM Formation (CVD)
+### Key Reactions
+```
 CH₄ → C(s) + 2H₂
 C₂H₄ → 2C(s) + 2H₂
 C₂H₂ → 2C(s) + H₂
+```
 
-🌟 Advantages Over Conventional Methods
-AspectConventional CNM ProductionOur ProcessCatalystExpensive metals (Ni, Co, Fe)Low-cost biocharCarbon SourceFossil fuels (methane, acetylene)Waste plasticsCostHigh CAPEX/OPEXSignificantly reducedSustainabilityHigh CO₂ emissionsCarbon-negative potentialWaste ManagementNot addressedDual waste valorizationEnergyExternal heating requiredPartial autothermal operation
+## 📊 Simulation Results
 
-🔮 Future Work
-Experimental Validation
+### Performance Metrics
+- ✅ **Methane Conversion**: 40-70%
+- ✅ **Carbon Deposition Rate**: 9.4-15.6 mg·h⁻¹·g⁻¹ catalyst
+- ✅ **CNM Yield**: 20-25% of reactor output
+- ✅ **H₂ Volume %**: Increases with temperature
+- ✅ **Product Purity**: >90% carbon content
 
- Bench-scale reactor construction (50-200 g/h capacity)
- Parametric experimental runs
- CNM characterization (TEM, SEM, Raman, XRD)
- Product quality assessment
+### Product Distribution (Typical Run)
 
-Model Enhancement
+**Plastic Pyrolysis:**
+- Bio-oil: 20-30 wt%
+- Gases: 60-75 wt%
+- Char: 5-10 wt%
 
- Detailed kinetic rate expressions
- RStoic implementation for CNM growth
- Catalyst deactivation modeling
- Dynamic simulation capabilities
+**Biomass Pyrolysis:**
+- Biochar: 20-35 wt%
+- Volatiles: 65-80 wt%
 
-Scale-up & Commercialization
+**CNM Reactor:**
+- Solid CNMs: 20-25%
+- H₂-rich gas: 75-80%
 
- Pilot plant design (1-10 ton/day)
- Techno-economic analysis (TEA)
- Life cycle assessment (LCA)
- Heat integration optimization
- Market application studies
+### Parametric Analysis
+The simulation includes sensitivity studies showing:
+- ↗️ Temperature increases → Higher CH₄ conversion
+- ↗️ Temperature increases → Higher carbon deposition rate
+- ↗️ Temperature increases → Greater CNM yield
+- ↗️ Temperature increases → Higher H₂ concentration in off-gas
 
-Catalyst Optimization
+##  Installation & Usage
 
- Biochar activation methods
- Metal impregnation studies (Fe, Ni)
- Selectivity tuning (CNTs vs. CNSs)
- Regeneration protocols
+### Prerequisites
+- Aspen Plus V14 or later
+- Windows OS (recommended)
+- Basic knowledge of process simulation
+- Familiarity with pyrolysis and CVD processes
 
+### Getting Started
 
- Applications of Carbon Nanomaterials
-The CNMs produced through this process can be utilized in:
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/CNM-from-waste.git
+cd CNM-from-waste
+```
 
-⚡ Energy Storage: Supercapacitors, lithium-ion batteries
-🔬 Electronics: Conductive composites, sensors, transistors
-🏗 Structural Materials: High-strength composites
-🌊 Environmental: Water treatment, gas adsorption
-⚕ Biomedical: Drug delivery, biosensors, tissue engineering
-⚗ Catalysis: Catalyst supports, electrocatalysts
+2. **Open Aspen Plus files**
+- Navigate to `/simulations/` directory
+- Open `.bkp` or `.apw` files in Aspen Plus V14
 
+3. **Run simulations**
+- Flowsheet 1: `Plastic_to_Biooil.bkp`
+- Flowsheet 2: `Biomass_to_Biochar.bkp`
+- Flowsheet 3: `CNM_Formation.bkp`
 
- Key References
+4. **Modify parameters**
+- Feed composition: Update in `PLASTIC` and `BIOMASS` streams
+- Operating conditions: Modify in reactor blocks (PYROL, PYRO, R-PLUG)
+- Property methods: Configure in `Setup → Properties`
 
-Production of hydrogen by catalytic methane decomposition using biochar - ScienceDirect
-Conversion of pyrolytic gases into bamboo-type CNTs using biochar catalyst - ScienceDirect
-Wong et al. (2015) - Plastic waste as fuel source review
-Wang & Wang (2019) - Biochar preparation and environmental applications
-Kumar & Ando (2010) - CVD carbon nanotube growth mechanisms
+### Running Parametric Studies
+1. Navigate to `Model Analysis Tools → Sensitivity`
+2. Select variable to vary (e.g., CNM Reactor Temperature)
+3. Define range and number of points
+4. Select output variables to track
+5. Run analysis and export results
 
-(Full reference list available in project report)
+##  Project Structure
 
- Acknowledgments
-Special thanks to:
+```
+CNM-from-waste/
+│
+├── simulations/
+│   ├── Flowsheet1_Plastic_Pyrolysis.bkp
+│   ├── Flowsheet2_Biomass_Pyrolysis.bkp
+│   └── Flowsheet3_CNM_Formation.bkp
+│
+├── docs/
+│   ├── Project_Report.pdf
+│   ├── Process_Diagrams.pdf
+│   └── Results_Analysis.xlsx
+│
+├── data/
+│   ├── feedstock_properties.csv
+│   ├── experimental_validation.csv
+│   └── parametric_study_results.csv
+│
+├── images/
+│   ├── flowsheet1.png
+│   ├── flowsheet2.png
+│   ├── flowsheet3.png
+│   └── results_plots/
+│
+├── README.md
+├── LICENSE
+└── CITATION.cff
+```
 
-Prof. Manoj Kumar Jena for invaluable guidance and supervision
-IIT Jodhpur Chemical Engineering Department for facilities and support
-Aspen Technology for simulation software access
+##  Future Work
 
+### Experimental Validation
+- [ ] Bench-scale reactor construction (50-200 g/h)
+- [ ] CNM morphology characterization (TEM, SEM, Raman)
+- [ ] Product yield verification
+- [ ] Long-term catalyst stability testing
 
- Contact
-Ayushi Singh
-B.Tech Chemical Engineering
-Indian Institute of Technology Jodhpur
+### Model Enhancement
+- [ ] Detailed kinetic rate expressions
+- [ ] Dynamic modeling capabilities
+- [ ] Catalyst deactivation/regeneration cycles
+- [ ] Scale-up design considerations
+
+### Optimization Studies
+- [ ] Biochar activation/impregnation (Fe, Ni loading)
+- [ ] Heat integration network design
+- [ ] Multi-objective optimization (yield, purity, energy)
+- [ ] Sensitivity to feedstock variability
+
+### Economic & Environmental Analysis
+- [ ] Life Cycle Assessment (LCA)
+- [ ] Techno-economic analysis (TEA)
+- [ ] Carbon footprint quantification
+- [ ] Market analysis for CNM applications
+
+## 📚 References
+
+1. Production of hydrogen by catalytic methane decomposition using biochar - [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0360319920330317)
+
+2. Conversion of pyrolytic gases into bamboo-type carbon nanotubes - [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0301479721018533)
+
+3. Computer-Aided Design of Large-Scale Nanomaterials Synthesis - [Wiley](https://onlinelibrary.wiley.com/doi/full/10.1002/cben.202300075)
+
+4. Wong et al. (2015). Plastic waste as fuel source. *Renewable and Sustainable Energy Reviews*, 50, 1167-1180.
+
+5. Kumar & Ando (2010). CVD of carbon nanotubes: A review. *Journal of Nanoscience and Nanotechnology*, 10(6), 3739-3758.
+
+## 👨‍🔬 Author
+
+**Ayushi Singh**  
+B.Tech. Chemical Engineering  
+Indian Institute of Technology Jodhpur  
 Roll No: B22CH005
 
+**Supervisor:** Prof. Manoj Kumar Jena
+
+## 🙏 Acknowledgments
+
+- IIT Jodhpur Chemical Engineering Department
+- Prof. Manoj Kumar Jena for supervision and guidance
+- Aspen Technology for simulation software support
 
 
- Project Highlights
 
-"This project demonstrates that waste is not waste—it's a resource. By intelligently integrating plastic and biomass waste streams through thermochemical conversion, we can simultaneously solve environmental problems while producing high-value nanomaterials and clean hydrogen energy, creating a truly circular and sustainable economy."
+---
 
-Waste → Resource → High-Value CNMs
-A scalable, green pathway that closes the loop on circular materials
+**⭐ If you find this project useful, please consider starring the repository!**
+
+---
+
+*Last Updated: November 2025*
